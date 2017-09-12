@@ -2,11 +2,12 @@
   "name": "find-my-way",
   "version": "1.4.1",
   "description": "Crazy fast http radix based router",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "bench": "node bench.js",
     "test": "standard && tap test/*.test.js",
-    "coveralls": "tap test/*.test.js --cov --coverage-report=text-lcov | coveralls"
+    "coveralls": "tap test/*.test.js --cov --coverage-report=text-lcov | coveralls",
+    "build": "babel index.js node.js --out-dir lib"
   },
   "repository": {
     "type": "git",
@@ -31,5 +32,10 @@
     "request": "^2.81.0",
     "standard": "^10.0.2",
     "tap": "^10.3.2"
+  },
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0"
   }
 }
